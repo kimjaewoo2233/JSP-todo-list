@@ -1,0 +1,24 @@
+package com.example.spr.calc.controller;
+
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet(name = "calcController" ,urlPatterns = "/calc/makeResult")
+public class CalcController extends HttpServlet {
+
+    @Override
+    protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+            String num1 = request.getParameter("num1"); //문자열로 넘어온다
+            String num2 = request.getParameter("num2");
+
+            System.out.printf("num1 %s",num1);
+            System.out.printf("num2 %s",num2);
+
+            response.sendRedirect("");
+    }
+}
