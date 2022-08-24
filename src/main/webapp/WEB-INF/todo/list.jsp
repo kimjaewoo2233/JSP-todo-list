@@ -13,6 +13,8 @@
 </head>
 <body>
     <h1>List 페이지</h1>
+    <h2>${loginInfo}</h2>
+    <h3>${loginInfo.mname}</h3>
     <ul>
         <c:forEach var="dto" items="${dtoList}">
            <li>
@@ -23,6 +25,9 @@
            </li>
         </c:forEach>
     </ul>
+    <form action="/logout" method="post">
+        <input type="submit" value="LOGOUT">
+    </form>
 
 </body>
 </html>
